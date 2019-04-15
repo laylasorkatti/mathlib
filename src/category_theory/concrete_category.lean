@@ -68,9 +68,9 @@ instance : has_coe_to_fun (X ⟶ Y) :=
 
 @[simp] lemma coe_id {X : bundled c} : ((𝟙 X) : X → X) = id := rfl
 
--- Poison.
--- @[extensionality] lemma bundled_hom.ext  {f g : X ⟶ Y} : (∀ x : X, f x = g x) → f = g :=
--- λ w, subtype.ext.2 $ funext w
+-- This should not be a global extensionality lemma: it forgets too much.
+lemma bundled_hom.ext  {f g : X ⟶ Y} : (∀ x : X, f x = g x) → f = g :=
+λ w, subtype.ext.2 $ funext w
 
 @[simp] lemma bundled_hom_coe (val : X → Y) (prop) (x : X) :
   (⟨val, prop⟩ : X ⟶ Y) x = val x := rfl

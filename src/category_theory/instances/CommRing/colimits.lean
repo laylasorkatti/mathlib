@@ -36,7 +36,7 @@ comm_ring.right_distrib : ∀ {α : Type u} [c : comm_ring α] (a b c_1 : α), (
 
 namespace category_theory.instances.CommRing.colimits
 
-local attribute [extensionality] bundled_hom.ext
+local attribute [extensionality] bundled.hom_ext
 
 variables {J : Type v} [small_category J] (F : J ⥤ CommRing.{v})
 

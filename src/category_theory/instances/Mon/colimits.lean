@@ -30,7 +30,7 @@ A slightly bolder claim is that we could do this with tactics, as well.
 
 namespace category_theory.instances.Mon.colimits
 
-local attribute [extensionality] bundled_hom.ext
+local attribute [extensionality] bundled.hom_ext
 
 variables {J : Type v} [small_category J] (F : J ⥤ Mon.{v})
 
